@@ -1,0 +1,49 @@
+﻿@{
+    ViewData["Title"] = "Media";    
+}
+<section id="app" v-cloak>
+    <div class="container-fluid">
+        <h3>Media List</h3>
+        <div class="row">
+            <div class="col-12 d-flex justify-content-end">
+                <button type="button" v-on:click="showModal" class="btn btn-primary">Add Movie</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-4 form-group">
+                <label>Genre</label>
+                <select class="custom-select form-control">
+                    <option>- Select Genre -</option>
+                    <!--Todo: Fill Genre list-->
+                </select>
+            </div>
+        </div>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Title</th>
+                    <th>Release Date</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr v-for="item in data">
+                    <td>{{item.id}}</td>
+                    <td>{{item.title}}</td>
+                    <td>{{item.releaseDate}}</td>
+                    <td>{{item.isActive}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!--Add Modal-->
+    <media-modal v-model:show-modal="isAddModalVisible"></media-modal>
+</section>
+
+
+
+@section scripts{
+    <script type="text/javascript" src="~/dist/media.index.min.js"></script>
+}
