@@ -75,10 +75,7 @@
                     });
             },
             save() {
-                //Todo: Post Media object
-                let model = {
-                    title: "Test"
-                };
+                //Todo: Post Media object                
 
                 //Todo: Save Media Object
                 fetch("", {
@@ -86,7 +83,7 @@
                     headers: {
                         "Content-Type": "application/json"
                     },
-                    body: JSON.stringify(model)
+                    //body: //Todo: Obejct here
                 })
             }
         },
