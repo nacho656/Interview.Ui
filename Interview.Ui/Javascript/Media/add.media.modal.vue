@@ -44,13 +44,13 @@
     export default {
         props: {
             showModal: Boolean
-            //Todo: Notify Parent of save
+            //Todo: 04 - Notify Parent of save
         },
         emits: ["update:showModal"],
         data() {
             return {
                 genres: []
-                //Todo: Add Media Properties & bind to Fields
+                //Todo: 02 - Add Media Properties & bind to Fields
             };
         },
         watch: {
@@ -75,15 +75,14 @@
                     });
             },
             save() {
-                //Todo: Post Media object                
 
-                //Todo: Save Media Object
+                //Todo: 03 - Save Media Object
                 fetch("", {
                     method: "POST",
                     headers: {
                         "Content-Type": "application/json"
                     },
-                    //body: //Todo: Obejct here
+                    //body: //Object here
                 })
             }
         },
